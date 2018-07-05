@@ -1,3 +1,22 @@
+GIT
+  remote: https://github.com/akretion/ooor.git
+  revision: f0aa6c70601cc28dbbb519ebec33af40f57b3943
+  specs:
+    ooor (2.3.0)
+      activemodel (>= 3.2.0)
+      faraday
+
+GIT
+  remote: https://github.com/akretion/ooorest.git
+  revision: 83f20f69bdc32a97f8b4f1f9afd85a37a48a3817
+  specs:
+    ooorest (1.9.9)
+      actionpack (>= 3.1)
+      kaminari
+      ooor (>= 1.9)
+      railties (>= 3.1)
+      warden
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -24,11 +43,20 @@ GEM
       erubi (~> 1.4)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.0, >= 1.0.3)
+    active_model_serializers (0.10.7)
+      actionpack (>= 4.1, < 6)
+      activemodel (>= 4.1, < 6)
+      case_transform (>= 0.2)
+      jsonapi-renderer (>= 0.1.1.beta1, < 0.3)
     activejob (5.2.0)
       activesupport (= 5.2.0)
       globalid (>= 0.3.6)
     activemodel (5.2.0)
       activesupport (= 5.2.0)
+    activemodel-serializers-xml (1.0.2)
+      activemodel (> 5.x)
+      activesupport (> 5.x)
+      builder (~> 3.1)
     activerecord (5.2.0)
       activemodel (= 5.2.0)
       activesupport (= 5.2.0)
@@ -59,6 +87,8 @@ GEM
       rack (>= 1.6.0)
       rack-test (>= 0.6.3)
       xpath (~> 3.1)
+    case_transform (0.2)
+      activesupport
     childprocess (0.9.0)
       ffi (~> 1.0, >= 1.0.11)
     chromedriver-helper (1.2.0)
@@ -76,6 +106,8 @@ GEM
     duktape (2.0.1.0)
     erubi (1.7.1)
     execjs (2.7.0)
+    faraday (0.15.2)
+      multipart-post (>= 1.2, < 3)
     ffi (1.9.25-x86-mingw32)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
@@ -85,6 +117,19 @@ GEM
     jbuilder (2.7.0)
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
+    jsonapi-renderer (0.2.0)
+    kaminari (1.1.1)
+      activesupport (>= 4.1.0)
+      kaminari-actionview (= 1.1.1)
+      kaminari-activerecord (= 1.1.1)
+      kaminari-core (= 1.1.1)
+    kaminari-actionview (1.1.1)
+      actionview
+      kaminari-core (= 1.1.1)
+    kaminari-activerecord (1.1.1)
+      activerecord
+      kaminari-core (= 1.1.1)
+    kaminari-core (1.1.1)
     loofah (2.2.2)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -99,6 +144,7 @@ GEM
     minitest (5.11.3)
     msgpack (1.2.4-x86-mingw32)
     multi_json (1.13.1)
+    multipart-post (2.0.0)
     nio4r (2.3.1)
     nokogiri (1.8.4-x86-mingw32)
       mini_portile2 (~> 2.3.0)
@@ -170,6 +216,8 @@ GEM
       tzinfo (>= 1.0.0)
     uglifier (4.1.14)
       execjs (>= 0.3.0, < 3)
+    warden (1.2.7)
+      rack (>= 1.0)
     web-console (3.6.2)
       actionview (>= 5.0)
       activemodel (>= 5.0)
@@ -185,6 +233,8 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  active_model_serializers
+  activemodel-serializers-xml
   bootsnap (>= 1.1.0)
   byebug
   capybara (>= 2.15, < 4.0)
@@ -192,6 +242,8 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   duktape
   jbuilder (~> 2.5)
+  ooor!
+  ooorest!
   puma (~> 3.11)
   rails (~> 5.2.0)
   sass-rails (~> 5.0)
